@@ -5,12 +5,12 @@ namespace TrängselskattGbg
 {
     public class BetalstationerGBG
     {
-        //set the max possible amount per day
+        //Set the max possible amount per day
         private readonly int maxTotalBelopp = 60;
-        //totalBelopp is holding total amount to be payed
+        //totalBelopp is holding total amount to be payed, initialize to 0
         int totalBelopp = 0;
 
-      //List of all amounts per one day
+        //List of all amounts per one day
         List<int> totalBelopps = new List<int>();
 
         
@@ -37,12 +37,12 @@ namespace TrängselskattGbg
 
 
            
-           //loop thrue arrey elements and extract necessary information like time of day,month,day of week
+           //Loop thrue arrey elements and extract necessary information like time of day,month,day of week
            for (int i = 0; i < individualTimes.Length; i++)
            {
                     // Parse the string into a DateTime object
                     DateTime dateTime = DateTime.ParseExact(individualTimes[i].Trim(), "yyyy-MM-dd HH:mm", null);
-
+              
                     // Extract the time part as TimeSpan
                     TimeSpan carCheckedInHour = dateTime.TimeOfDay;
 
@@ -54,7 +54,7 @@ namespace TrängselskattGbg
 
                  
 
-                //check for time of registration and set amountn for that paricular time interval
+                //Check for time of registration and set amountn for that paricular time interval
                     if ((carCheckedInHour >= startTimeInterval1 && carCheckedInHour < startTimeInterval2) ||
                         (carCheckedInHour >= startTimeInterval5 && carCheckedInHour < startTimeInterval6) ||
                         (carCheckedInHour >= startTimeInterval9 && carCheckedInHour < startTimeInterval10))
@@ -72,7 +72,7 @@ namespace TrängselskattGbg
 
                     else { totalBelopps.Add(0); }
 
-                //recalculate all amount and save data in totalBelopp
+                //Recalculate all amounts and save data in totalBelopp
                 totalBelopp = totalBelopps.Sum();
 
                
@@ -106,17 +106,17 @@ namespace TrängselskattGbg
                 }
                 else
                 {
-                    //if we have 3 entries in 60 minutes and one more after one hour, program is caculating as 4 separate entries
-                    //instead as: first3 = maxBelopp + entry4=belopp
+                    /*If we have 3 entries in 60 minutes and one more after one hour, program is caculating as 4 separate entries
+                    instead as: first3 = maxBelopp + entry4=belopp */
                     Console.WriteLine("The time difference between the first and last check-ins is greater than 60 minutes.");
                 }
             }
             
-            //set max charge per day to 60kr
+            //Set max charge per day to 60kr
             if (totalBelopp > maxTotalBelopp) { totalBelopp = maxTotalBelopp; }
 
 
-            //clear the list,in case that in future we want to calculate totalBelop for all month/year
+            //Clear the list,in case that in future we want to calculate totalBelop for all month/year
             totalBelopps.Clear();
 
             return totalBelopp;
