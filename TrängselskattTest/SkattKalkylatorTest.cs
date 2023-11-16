@@ -52,8 +52,8 @@ namespace TrängselskattTest
         public void WhenRäknaTotalBeloppTest_MultyCaseRegistration_60MinutInterval_AmountToPayIsEqualTo_HighestFee()
         {
             /*if I add fourth DateTime (2023-05-31 09:10) with more than 60 min diference and change
-             * expected value to 26,because first thre returns 18 + 8 for last entry total should be 26
-             * but method is counting total value for all four entrys and test is negativ in that case*/
+              expected value to 26,because first thre returns 18 + 8 for last entry total should be 26
+              but method is counting total value for all four entrys and test is negativ in that case*/
             var carCheckedInTimes = "2023-05-31 06:20,2023-05-31 06:45,2023-05-31 07:10";
 
             var amountToPay = SkattKalkylator.RäknaTotalBelopp(carCheckedInTimes);
