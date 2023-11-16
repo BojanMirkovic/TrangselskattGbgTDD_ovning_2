@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrängselskattGbg", "TrängselskattGbg\TrängselskattGbg.csproj", "{95EA44C4-9D47-4E90-A6EA-FA95705C005B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrängselskattTest", "TrängselskattTest\TrängselskattTest.csproj", "{3DEC0EA5-BA16-4C54-97C1-4DDDB326FEED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95EA44C4-9D47-4E90-A6EA-FA95705C005B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95EA44C4-9D47-4E90-A6EA-FA95705C005B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95EA44C4-9D47-4E90-A6EA-FA95705C005B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95EA44C4-9D47-4E90-A6EA-FA95705C005B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DEC0EA5-BA16-4C54-97C1-4DDDB326FEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DEC0EA5-BA16-4C54-97C1-4DDDB326FEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DEC0EA5-BA16-4C54-97C1-4DDDB326FEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DEC0EA5-BA16-4C54-97C1-4DDDB326FEED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CC61539-783A-4808-ADA3-36187B2EDEEB}
+	EndGlobalSection
+EndGlobal
